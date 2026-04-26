@@ -1,0 +1,44 @@
+{% include base_path %}
+<div class="pub-card">
+  <div class="pub-card__thumb">
+    {% if post.image %}
+      <a href="{{ base_path }}{{ post.url }}">
+        <img src="{{ post.image | prepend: base_path }}" alt="{{ post.title | strip_html }}">
+      </a>
+    {% else %}
+      <a href="{{ base_path }}{{ post.url }}" class="pub-card__placeholder">
+        <span>{{ post.venue_short | default: post.venue | truncate: 14 }}</span>
+      </a>
+    {% endif %}
+  </div>
+  <div class="pub-card__body">
+    {% if post.venue_short %}
+      <span class="pub-card__badge pub-card__badge--{{ post.venue_short | downcase | replace: ' ', '-' | replace: '/', '-' }}">{{ post.venue_short }}</span>
+      {% if post.venue_note %}<span class="pub-card__note">{{ post.venue_note }}</span>{% endif %}
+    {% endif %}
+    <h3 class="pub-card__title"><a href="{{ base_path }}{{ post.url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</a></h3>
+    {% if post.authors_html %}
+      <p class="pub-card__authors">{{ post.authors_html }}</p>
+    {% endif %}
+    <p class="pub-card__venue">
+      <em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+    </p>
+    <div class="pub-card__links">
+      {% if post.projecturl %}<a href="{{ post.projecturl }}" class="pub-card__btn pub-card__btn--project" target="_blank" rel="noopener">Project</a>{% endif %}
+      {% if post.doiurl %}
+        <a href="{{ post.doiurl }}" class="pub-card__btn pub-card__btn--paper" target="_blank" rel="noopener">Paper</a>
+      {% elsif post.arxivurl %}
+        <a href="{{ post.arxivurl }}" class="pub-card__btn pub-card__btn--paper" target="_blank" rel="noopener">Paper</a>
+      {% elsif post.paperurl %}
+        <a href="{{ post.paperurl | prepend: base_path }}" class="pub-card__btn pub-card__btn--paper" target="_blank" rel="noopener">Paper</a>
+      {% endif %}
+      {% if post.codeurl %}<a href="{{ post.codeurl }}" class="pub-card__btn pub-card__btn--code" target="_blank" rel="noopener">Code</a>{% endif %}
+      {% if post.bibtex %}
+      <details class="pub-card__bibtex">
+        <summary class="pub-card__btn pub-card__btn--bibtex">BibTeX</summary>
+        <pre><code>{{ post.bibtex | strip }}</code></pre>
+      </details>
+      {% endif %}
+    </div>
+  </div>
+</div>
