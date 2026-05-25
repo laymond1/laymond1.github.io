@@ -10,7 +10,7 @@ period: "2023 – Present"
 - On-Device Training (related to my CVPR 2026 publication on CPS-Prompt)
 - Online Continual Learning (related to MixER, IEEE Access 2024)
 - Hardware-Aware Neural Architecture Search (related to GTSNet, EAAI 2023)
-- Multimodal Learning and Out-of-Distribution Detection (related to MAND, under review)
+- Multimodal Learning and Out-of-Distribution Detection (related to MAND, EIML @ ICML 2026)
 
 **Code:**
 - [github.com/laymond1/cps-prompt](https://github.com/laymond1/cps-prompt)
