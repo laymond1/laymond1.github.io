@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2026-cps-prompt
 excerpt: "A patch-aware sparse prompting method with decoupled training that enables continual learning on resource-constrained edge devices."
-date: 2026-06-01
+date: 2026-06-06
 venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
 venue_short: "CVPR"
 image: /images/papers/cps-prompt.png
