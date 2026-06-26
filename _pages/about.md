@@ -30,6 +30,7 @@ Research Interests
 News
 ======
 
+- **[2026.06]** Won the *Grand Prize (1st Place)* at the Nota AI On-Device AI Optimization Competition, held at **KCC 2026**.
 - **[2026.02]** *CPS-Prompt* Paper accepted to **CVPR 2026**.
 - **[2024.03]** *MixER* published in **IEEE Access**.
 - **[2024]** Awarded *MSIT International Research Training Fellowship*; visiting student at the **University of Toronto**.
